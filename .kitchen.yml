@@ -9,6 +9,8 @@ driver:
   image_id: ami-9c447bfc
   security_group_ids: ["sg-e5b4a682"]
   retryable_tries: 120
+  tags:
+    Name: KitchenTest
 
 provisioner:
   name: chef_zero
