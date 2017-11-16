@@ -6,5 +6,4 @@
 
 apt_package 'python-django' do
 	action :install
-	version '1.6.1'
 end

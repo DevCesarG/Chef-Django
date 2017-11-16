@@ -16,3 +16,7 @@ end
 describe port(80), :skip do
   it { should_not be_listening }
 end
+
+describe command('django-admin --version') do
+  its('stdout') { should match /1.6.1/ }
+end
