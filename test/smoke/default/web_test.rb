@@ -17,6 +17,16 @@ describe port(80), :skip do
   it { should_not be_listening }
 end
 
+# Verify django is installed
 describe command('django-admin --version') do
   its('stdout') { should match /1.6.1/ }
+end
+
+# Verify git is installed as a service
+describe package 'git' do
+	it { should be_installed }
+end
+
+describe command('which pip') do
+  its('stdout') { should match /pip/ }
 end
